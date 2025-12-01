@@ -1,0 +1,126 @@
+.food-item {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1.4rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  transition: 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.food-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 35px rgba(255, 215, 0, 0.25);
+}
+
+/* IMAGE SECTION */
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.food-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.4s ease;
+}
+
+.food-item:hover .food-item-image {
+  transform: scale(1.09);
+}
+
+/* FIXED ADD BUTTON AT BOTTOM */
+.add {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  background: #ffd700;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.25s;
+  box-shadow: 0 4px 10px rgba(255,215,0,0.35);
+  z-index: 10;
+}
+
+.add:hover {
+  transform: scale(1.1);
+}
+
+/* COUNTER BUTTONS */
+.food-item-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.65);
+  padding: 6px 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,215,0,0.25);
+  z-index: 10;
+}
+
+.food-item-counter img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.food-item-counter img:hover {
+  transform: scale(1.15);
+}
+
+.food-item-counter p {
+  color: #ffd700;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* INFO SECTION */
+.info {
+  padding: 1rem 1.2rem;
+  color: #fff;
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-item-name-rating p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.food-item-name-rating img {
+  width: 90px;
+}
+
+.food-item-desc {
+  margin-top: 0.4rem;
+  color: #d4d4d4;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  min-height: 48px;
+}
+
+.food-item-price {
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffcc33;
+  text-shadow: 0 0 10px rgba(255,215,0,0.3);
+}

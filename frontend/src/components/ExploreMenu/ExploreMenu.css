@@ -1,0 +1,93 @@
+.explore-menu {
+  width: 100%;
+  padding: 70px 20px;
+  text-align: center;
+  background: #f7f7f8;
+}
+
+/* PERFECT PREMIUM HEADING */
+.explore-menu h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+/* LUXURY CENTER TEXT */
+.explore-menu-text {
+  max-width: 680px;
+  margin: 18px auto 50px;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.75;
+  font-weight: 400;
+  background: #ffffffcc;
+  padding: 15px 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+/* SCROLL LIST */
+.explore-menu-list {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  padding: 10px 4px 20px;
+  scroll-behavior: smooth;
+}
+
+/* SUPER CLEAN MODERN SCROLLBAR */
+.explore-menu-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.explore-menu-list::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 20px;
+}
+
+.explore-menu-list::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+/* ITEM CONTAINER */
+.explore-menu-list-item {
+  min-width: 150px;
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 10px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.06);
+}
+
+.explore-menu-list-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 5px 18px rgba(0,0,0,0.12);
+}
+
+/* IMAGES */
+.explore-menu-list-item img {
+  width: 125px;
+  height: 125px;
+  border-radius: 18px;
+  object-fit: cover;
+  transition: 0.3s ease;
+  border: 1.5px solid #e6e6e6;
+}
+
+/* ACTIVE SELECTION (CLASSY, NO ORANGE) */
+.explore-menu-list-item img.active {
+  transform: scale(1.1);
+  border: 2.5px solid #4a4a4a;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+}
+
+/* FOOD NAME */
+.explore-menu-list-item p {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+

@@ -1,0 +1,219 @@
+/* MAIN NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+.nav-logo h2 {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #e4a72f, #d48c0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+/* NAV ITEMS */
+.nav-item {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-item li {
+  cursor: pointer;
+  font-size: 17px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.nav-item .active {
+  color: #d48c0d;
+  font-weight: 600;
+}
+
+/* RIGHT SIDE ICONS + BUTTON */
+.nav-image {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-image img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-image img:hover {
+  transform: scale(1.15);
+}
+/* basket icon wrapper */
+.basket-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* red dot on top */
+.cart-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 9px;
+  height: 9px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+
+/* SIGN-IN BUTTON */
+.nav-image button {
+  padding: 8px 18px;
+  font-size: 15px;
+  background: linear-gradient(90deg, #d48c0d, #e4a72f);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-image button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(212, 140, 13, 0.4);
+}
+
+/* dwopdow start*/
+.drop-down {
+  position: relative;
+  cursor: pointer;
+}
+
+.drop-down img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.drop-down ul {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #fff8d6;                 /* light golden */
+  border: 2px solid #d4a017;           /* gold border */
+  border-radius: 15px;
+  padding: 10px 0;
+  width: 170px;
+  list-style: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+/* Show dropdown on hover */
+.drop-down:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* List items */
+.drop-down ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: #6a4e00;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.drop-down ul li img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hover effect */
+.drop-down ul li:hover {
+  background: #ffe9a3;                 /* soft golden hover */
+  border-radius: 10px;
+}
+
+/* dropdown end */
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  /* Force navbar single-line */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    flex-wrap: nowrap;       /* prevents wrapping */
+    gap: 10px;
+  }
+
+  /* hide menu list */
+  .nav-item {
+    display: none;
+  }
+
+  /* logo small but readable */
+  .nav-logo {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .nav-logo h2 {
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* icons + button stay in one line */
+  .nav-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;          /* prevents icons from shrinking */
+  }
+
+  /* icons scale for mobile */
+  .nav-image img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+
+
+  /* improved mobile button */
+  .nav-image button {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 30px;
+    background: #111;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    white-space: nowrap;     /* button never breaks */
+  }
+}

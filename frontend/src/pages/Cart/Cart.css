@@ -1,0 +1,230 @@
+/* ===========================
+   PAGE WRAPPER (.cart root)
+   Your root element already has: className="cart left-cart"
+   So .cart is the flex container and its children are:
+     - .cart-items            (left)
+     - .cart-bottom.right-cart (right totals)
+     - .cart-promocode        (will be placed under totals in right column)
+   =========================== */
+
+.cart {
+  display: flex;
+  gap: 30px;
+  padding: 36px 5%;
+  background: #0f0f10;
+  min-height: 100vh;
+  color: #fff;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allow stacking on small screens */
+  box-sizing: border-box;
+}
+
+/* LEFT: your existing .cart-items (treat as left column) */
+.cart-items {
+  flex: 2 1 680px; /* grow, shrink, basis */
+  background: rgba(255,255,255,0.03);
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,215,0,0.12);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.45);
+}
+
+/* RIGHT: .right-cart (it exists on your cart-bottom div) */
+.right-cart {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-self: flex-start;
+  min-width: 260px;
+}
+
+/* If your cart-bottom has class 'cart-bottom right-cart' we style .cart-bottom too */
+.cart-bottom {
+  background: rgba(255,255,255,0.04);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,215,0,0.12);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  position: sticky;
+  top: 36px;
+}
+
+/* CART HEADER (title row) */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 0.9fr 0.9fr 0.9fr 0.6fr;
+  gap: 8px;
+  font-weight: 700;
+  color: #ffd966;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+/* EACH ITEM ROW */
+.cart-items-item {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 0.9fr 0.9fr 0.9fr 0.6fr;
+  gap: 8px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* IMAGE */
+.cart-items-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255,215,0,0.12);
+  background: rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.cart-items-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #e9e9e9;
+  line-height: 1.1;
+}
+
+/* PRICE styling */
+.cart-items-item p:nth-child(3),
+.cart-items-item p:nth-child(5) {
+  font-weight: 700;
+  color: #ffd966;
+}
+
+/* QUANTITY */
+.cart-items-item p:nth-child(4) {
+  text-align: center;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  color: #ff6b6b;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.remove-btn:hover {
+  transform: scale(1.08);
+  background: rgba(255,0,0,0.06);
+}
+
+/* CART TOTALS (inside .cart-bottom) */
+.cart-total h2 {
+  margin: 0 0 10px 0;
+  color: #ffd966;
+  font-size: 1.3rem;
+}
+
+.cart-total-detalis,
+.cart-total-details,
+.cart-total.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #e8e8e8;
+}
+
+/* emphasize final total */
+.cart-total.details b:last-child {
+  color: #fff5d6;
+  font-size: 1.15rem;
+}
+
+/* CHECKOUT BUTTON */
+.cart-bottom button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #ffd700, #ffbf00);
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255,183,0,0.18);
+}
+.cart-bottom button:hover {
+  transform: translateY(-3px);
+}
+
+/* PROMO (it will appear under totals as requested) */
+.cart-promocode {
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,215,0,0.08);
+}
+
+/* promo input */
+.cart-prompcode-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.cart-prompcode-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+}
+.cart-prompcode-input button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #ffd700;
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* SMALL SCREENS: stack into single column */
+@media (max-width: 900px) {
+  .cart {
+    flex-direction: column;
+    padding: 24px 4%;
+  }
+
+  .cart-items,
+  .right-cart {
+    width: 100%;
+  }
+
+  .cart-items-title,
+  .cart-items-item {
+    grid-template-columns: 1fr 1fr 0.7fr 0.7fr 0.7fr 0.5fr;
+  }
+
+  .cart-items-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* TINY SCREENS: more compact */
+@media (max-width: 480px) {
+  .cart-items-title,
+  .cart-items-item {
+    grid-template-columns: 1fr 1fr 0.6fr 0.6fr 0.6fr 0.4fr;
+    font-size: 13px;
+  }
+
+  .cart-items-item img {
+    width: 48px;
+    height: 48px;
+  }
+}

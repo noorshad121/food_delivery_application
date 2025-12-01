@@ -1,0 +1,90 @@
+
+.list-p{
+  
+  background-color: green;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-radius: 15px;
+}
+/* Table container */
+.list-table {
+  width: 100%;
+  background: #271010;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.list-table-format.title {
+  background: #161010;
+  color: white;
+  font-weight: bold;
+}
+
+/* Image */
+.list-table-format-items img {
+  border-radius: 8px;
+  width: 65px;
+  height: 65px;
+  background-position: center;
+  object-fit: cover;
+  
+}
+
+.list-table-format p {
+  color: rgb(221, 209, 209);
+  font-size: 1rem;
+  line-height: 20px;
+}
+.list-table-format .crs {
+  color: rgb(205, 5, 5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.list-table-format .crs:active{
+  color: rgb(57, 11, 11);
+}
+
+
+/* ------------------------------- */
+/* PERFECT RESPONSIVE DESIGN */
+/* ------------------------------- */
+
+/* 📱 Mobile styles (works on all phones) */
+@media (max-width: 600px) {
+  /* Hide table headers */
+  .list-table-format.title {
+    display: none;
+  }
+
+  .list-table-format {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 10px;
+  }
+   
+  .list-table-format-items img {
+      
+    width: 60%;
+    height: 50%;
+  border-radius: 20px;
+
+  }
+}

@@ -1,0 +1,105 @@
+/* FOOTER MAIN */
+.footer {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  padding: 60px 8%;
+  color: #e4e4e4;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* --------------------------- */
+/* PREMIUM LOGO DESIGN        */
+/* --------------------------- */
+
+.fbn-logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fbn-logo .mark {
+  color: gold;
+  background: rgba(255, 215, 0, 0.15);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.4);
+}
+
+.fbn-logo .name {
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.fbn-logo:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+/* LEFT TEXT */
+.footer-content-left p {
+  max-width: 380px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #bbbbbb;
+}
+
+/* SOCIAL ICONS */
+.footer-social-icons img {
+  width: 32px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 6px gold);
+}
+
+/* CENTER + RIGHT */
+.footer-content-center h2,
+.footer-content-right h2 {
+  color: gold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-content-center ul li,
+.footer-content-right ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.footer-content-center ul li:hover,
+.footer-content-right ul li:hover {
+  color: gold;
+  transform: translateX(4px);
+}
+
+/* COPYRIGHT */
+.footer-copy-right {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+}
