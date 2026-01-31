@@ -56,8 +56,6 @@ Admins can manage food items and view all orders.
 - Express.js  
 - MongoDB + Mongoose  
 - JWT  
-- Multer (optional for images)  
+- Multer ( for image upload)  
 
 ---
-
-## 📁 Folder Structure
